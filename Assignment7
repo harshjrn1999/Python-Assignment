@@ -1,0 +1,75 @@
+Q Write a Python Program to find sum of array?
+
+l = [1,2,3,412,-123]
+
+sum = 0
+
+for i in l:
+  sum += i
+
+print("sum of array: ",sum)
+
+sum of array:  295
+
+Q Write a Python Program to find largest element in an array?
+
+l = [1,2,3,412,-123]
+
+max = -99999999
+
+for i in l:
+
+  if i > max:
+
+    max = i
+
+max
+
+Q Write a Python Program for array rotation?
+
+l = [1,2,3,412,-123]
+
+print(l[::-1])
+
+[-123, 412, 3, 2, 1]
+
+Q Write a Python Program to Split the array and add the first part to the end?
+
+def splitAdd(l, split):
+    '''
+    l = list
+    split = splitIndex
+    '''
+    out = []
+    for i in range(len(l)):
+        index = (i+len(l)+split)%len(l) 2+6+2
+        out.append(l[index])
+        
+    return out
+    
+l = [1,2,3,-412, 123, 369, 111]
+splitIndex = 2
+splitAdd(l, splitIndex)
+
+Q Write a Python Program to check if given array is Monotonic?
+
+def monotonic(array):
+  descresing =False
+  if (array[0] > array[1]):
+
+    descresing = True
+
+  for i in range(len(array)-1):
+
+    if(array[i] <array[i+1] and descresing or array[i] > array[i+1] and not descresing ):
+
+      return False
+
+  return True
+
+print(monotonic([1,2,3,4,5,6]))
+print(monotonic([1,2,8,1,9]))
+
+True
+False
+        
