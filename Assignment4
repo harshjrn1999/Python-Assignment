@@ -1,0 +1,281 @@
+Q Write a Python Program to Find the Factorial of a Number?
+
+n = int(input("Enter a number: "))
+
+def factb(n):
+  fact = 1
+
+  if n ==0 and n==1:
+    return 1
+
+  for i in range(1,n+1):
+      fact = fact*i
+  return fact
+
+out = factb(n)
+print("Factorial of number",out)
+
+Enter a number: 5
+Factorial of number 120
+
+Q Write a Python Program to Display the multiplication Table?
+
+num = int(input("Enter a no: "))
+
+for i in range(1,11):
+
+  print("{} X {} = {}".format(num,i,num*i))
+  
+ Enter a no: 7
+7 X 1 = 7
+7 X 2 = 14
+7 X 3 = 21
+7 X 4 = 28
+7 X 5 = 35
+7 X 6 = 42
+7 X 7 = 49
+7 X 8 = 56
+7 X 9 = 63
+7 X 10 = 70
+
+Q Write a Python Program to Print the Fibonacci sequence?
+
+num = int(input("Enter any number : "))
+n1,n2 = 0,1
+sum = 0
+
+if num<=0:
+  print("Please enter greater than 0")
+else:
+
+  for i in range(0,num):
+    print(sum,end=" ")
+    n1 = n2
+    n2 = sum
+    sum = n1+n2
+    
+
+[1]
+0s
+a = 5
+b = 2
+add = a + b
+div = a/b
+
+print(add)
+print(div)
+7
+2.5
+[2]
+0s
+height = 50
+base = 20
+
+area = height*base/2
+print("Area of triangle :",area)
+Area of triangle : 500.0
+[3]
+0s
+var1 = 123
+var2 =235
+
+temp = var1
+var1 = var2
+var2 = temp
+
+print("Swap of two variable var1 = {} and var2 = {}".format(var1,var2))
+Swap of two variable var1 = 235 and var2 = 123
+[5]
+0s
+import random
+print(random.randint(1, 10))
+10
+[7]
+0s
+km = 16
+miles = km/1.609
+print("Km to miles is : ",miles)
+Km to miles is :  9.944064636420137
+[9]
+0s
+c = 100
+
+f = (9*c/5)+32
+
+print("Temp is Fahrenheit",f)
+Temp is Fahrenheit 212.0
+[11]
+0s
+import calendar
+[14]
+0s
+year = 2022
+month = 12
+
+print(calendar.month(year,month))
+   December 2022
+Mo Tu We Th Fr Sa Su
+          1  2  3  4
+ 5  6  7  8  9 10 11
+12 13 14 15 16 17 18
+19 20 21 22 23 24 25
+26 27 28 29 30 31
+
+[15]
+0s
+# Solve the quadratic equation ax**2 + bx + c = 0
+
+# import complex math module
+import cmath
+
+a = 1
+b = 5
+c = 6
+
+# calculate the discriminant
+d = (b**2) - (4*a*c)
+
+# find two solutions
+sol1 = (-b-cmath.sqrt(d))/(2*a)
+sol2 = (-b+cmath.sqrt(d))/(2*a)
+
+print('The solution are {0} and {1}'.format(sol1,sol2))
+The solution are (-3+0j) and (-2+0j)
+[16]
+0s
+import cmath
+a = 2
+b = 5
+c = 10
+
+d = (b**2) - (4*a*c)
+
+s1 = (-b-cmath.sqrt(d))/(2*a)
+s2 = (-b+cmath.sqrt(d))/(2*a)
+
+print("Equation ",(s1,s2))
+Equation  ((-1.25-1.8540496217739157j), (-1.25+1.8540496217739157j))
+[20]
+0s
+var1 = 6
+var2 = 4
+
+var2 = var1 + var2  
+var1 = var2 - var1  
+var2 = var2 - var1  
+
+print('swap no: ',(var1,var2))
+swap no:  (4, 6)
+[23]
+2s
+n = int(input("Enter a number: "))
+
+def factb(n):
+  fact = 1
+
+  if n ==0 and n==1:
+    return 1
+
+  for i in range(1,n+1):
+      fact = fact*i
+  return fact
+
+out = factb(n)
+print("Factorial of number",out)
+
+Enter a number: 5
+Factorial of number 120
+[25]
+3s
+num = int(input("Enter a no: "))
+
+for i in range(1,11):
+
+  print("{} X {} = {}".format(num,i,num*i))
+Enter a no: 7
+7 X 1 = 7
+7 X 2 = 14
+7 X 3 = 21
+7 X 4 = 28
+7 X 5 = 35
+7 X 6 = 42
+7 X 7 = 49
+7 X 8 = 56
+7 X 9 = 63
+7 X 10 = 70
+[28]
+3s
+num = int(input("Enter any number : "))
+n1,n2 = 0,1
+sum = 0
+
+if num<=0:
+  print("Please enter greater than 0")
+else:
+
+  for i in range(0,num):
+    print(sum,end=" ")
+    n1 = n2
+    n2 = sum
+    sum = n1+n2
+
+Enter any number : 11
+0 1 1 2 3 5 8 13 21 34 55 
+
+Q Write a Python Program to Check Armstrong Number?
+
+num = int(input("Enter any no: "))
+
+def check_armstrong(num):
+  if num in range(1,10):
+    return True
+
+  order = len(str(num))
+  sum = 0
+  original = num
+  while num>0:
+    digit = num % 10
+    sum += digit ** order
+    num = num//10
+  if sum == original:
+    return True
+
+  return False
+
+if check_armstrong(num):
+  print("no is armstrong")
+
+else:
+  print("no is not armstrong")
+  
+Enter any no: 153
+no is armstrong
+
+Q Write a Python Program to Find Armstrong Number in an Interval?
+
+low = int(input("Enter the lower value of range: "))
+high = int(input("Enter the higher value of range: "))
+
+print("\nFrom {} to {} following are the Armstrong Number:".format(low, high), end='\n')
+for num in range(low, high+1):
+    
+    if(check_armstrong(num)):
+        print(num, end = ' ')
+        
+Enter the lower value of range: 100
+Enter the higher value of range: 1500
+
+From 100 to 1500 following are the Armstrong Number:
+153 370 371 407 
+
+Q Write a Python Program to Find the Sum of Natural Numbers?
+
+n = int(input("Enter Num: "))
+sum = 0
+for i in range(1,n+1):
+  sum += i
+
+print("Sum of no",sum)
+
+Enter Num: 5
+Sum of no 15
