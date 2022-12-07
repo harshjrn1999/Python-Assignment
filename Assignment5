@@ -1,0 +1,111 @@
+Q Write a Python Program to Find LCM?
+
+  a = int(input("Enter first Number"))
+  b = int(input("Enter second Number"))
+  maxnum = max(a,b)
+
+  while True:
+    if maxnum%a==0 and maxnum%b==0:
+      break
+    maxnum = maxnum +1
+
+print(f"The LCM of {a} and {b} is {maxnum}")
+
+
+Enter first Number24
+Enter second Number5
+The LCM of 24 and 5 is 120
+
+Q Write a Python Program to Find HCF?
+
+def hcf(a,b):
+
+  l = a if a<b else b
+
+  for i in range(1,l+1):
+
+    if (a%i==0) and (b%i==0):
+
+      hcf = i
+
+  return hcf
+
+print("the hcf  of two ",hcf(12,36))
+
+the hcf  of two  12
+
+Q Write a Python Program to Convert Decimal to Binary, Octal and Hexadecimal?
+
+def conversion(num):
+
+  print("Binary:  ",bin(num))
+  print("Octal:   ",oct(num))
+  print("Hexadecimal: ",hex(num))
+  
+conversion(7)
+Binary:   0b111
+Octal:    0o7
+Hexadecimal:  0x7
+
+Q Write a Python Program To Find ASCII value of a character?
+
+try:
+
+  char = input("Enter a character: ")
+  ASCII = ord(char)
+  print("ASCII :",(char,ASCII))
+
+except Exception as e:
+
+  print(e)
+  
+Enter a character: A
+ASCII : ('A', 65)
+
+Q Write a Python Program to Make a Simple Calculator with 4 basic mathematical operations?
+
+try:
+
+  while True:
+
+    num1 = int(input("Enter first number: "))
+    num2 = int(input("Enter second number: "))
+
+    print("for addition: +")
+    print("for Sub: -")
+    print("for mul: *")
+    print("for division: /")
+    print("for Exit: X")
+
+    ch = input("\nEnter the choice for mathematical operations: ")
+
+    if ch == '+':
+
+      out = num1+num2
+    elif ch == '-':
+      out = num1 - num2
+    elif ch == '*':
+      out = num1*num2
+
+    elif ch == '/':
+      out = num1/num2
+
+    if ch == 'X':
+      break
+
+    print("Result",out)
+
+except Exception as e:
+
+  print(e)
+  
+Enter first number: 5
+Enter second number: 8
+for addition: +
+for Sub: -
+for mul: *
+for division: /
+for Exit: X
+
+Enter the choice for mathematical operations: +
+Result 13
