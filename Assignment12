@@ -43,3 +43,59 @@ Flat  dict :  {2: 'Feb', 3: 'March'}
 
 Q Write a Python program to insertion at the beginning in OrderedDict?
 
+from collections import OrderedDict
+  
+# initialising ordered_dict
+iniordered_dict = OrderedDict([('Feb', '2'), ('Mar', '3')])
+  
+# inserting items in starting of dict 
+iniordered_dict.update({'Jan':'1'})
+iniordered_dict.move_to_end('Jan', last = False)
+  
+# print result
+print ("Ordered Dictionary after insertion : "+str(iniordered_dict))
+
+Ordered Dictionary after insertion : OrderedDict([('Jan', '1'), ('Feb', '2'), 
+
+Q Write a Python program to check order of character in string using OrderedDict()?
+
+def check(input,pattern):
+
+  dict = OrderedDict.fromkeys(input)
+
+  ptrlen = 0
+  for key,value in dict.items():
+    if(key == pattern[ptrlen]):
+      ptrlen = ptrlen + 1
+
+    if (ptrlen == (len(pattern))):
+      return 'True'
+
+  return 'False'
+
+string = input("Enter string : ")
+pattern  = input("Enter Pattern: ")
+
+if check(string,pattern):
+
+  print("Pattern matched")
+
+else:
+
+  print("Pattern not matched")
+
+Enter string : program
+Enter Pattern: grm
+Pattern matched
+
+Q Write a Python program to sort Python Dictionaries by Key or Value?
+
+a = {'k1':2,'k2':1,'k3':4,'4':4}
+
+print(sorted(a.keys()))
+print(sorted(a.items()))
+print(sorted(a.values()))
+
+['4', 'k1', 'k2', 'k3']
+[('4', 4), ('k1', 2), ('k2', 1), ('k3', 4)]
+[1, 2, 4, 4]
