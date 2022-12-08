@@ -1,0 +1,113 @@
+Q Write a program that calculates and prints the value according to the given formula?
+
+import math
+
+def calculate_formula(args):
+    c = 50
+    h = 30
+    result = []
+    for d in args:
+        result.append(int(math.sqrt((2*c*int(d))/h)))
+    print(result)
+    
+
+inp = list(input("Enter comma separated numbers input: ").split(','))
+calculate_formula(inp)
+
+Enter comma separated numbers input: 100,150,108
+[18, 22, 18]
+
+Q Write a program which takes 2 digits, X,Y as input and generates a 2-dimensional array. The element value in the i-th row and j-th column of the array should be i*j.
+
+x = int(input("Enter X value: "))
+y = int(input("enter Y value: "))
+
+matrix = []
+
+for i in range(x):
+  row = []
+  for j in range(y):
+
+    row.append(i*j)
+  matrix.append(row)
+
+print(matrix)
+
+Enter X value: 3
+enter Y value: 5
+[[0, 0, 0, 0, 0], [0, 1, 2, 3, 4], [0, 2, 4, 6, 8]]
+
+Q Write a program that accepts a comma separated sequence of words as input and prints the words in a comma-separated sequence after sorting them alphabetically.
+
+words = list(input("Enter : ").split(','))
+words.sort()
+print(','.join(words))
+
+Enter : how,are,you
+are,how,you
+
+Q Write a program that accepts a sequence of whitespace separated words as input and prints the words after removing all duplicate words and sorting them alphanumerically.
+
+words = list(set(input("Enter comma seperated words: ").split(' ')))
+words.sort() 
+print(' '.join(words))
+
+Enter comma seperated words: hello world and practice makes perfect and hello world again
+again and hello makes perfect practice world
+
+Q Write a program that accepts a sentence and calculate the number of letters and digits.
+
+s = input("input")
+
+d=l=0
+
+for c in s:
+  if c.isdigit():
+    d = d+1
+  elif c.isalpha():
+    l = l+1
+
+  else:
+
+    pass
+
+print("Letters",l)
+print("Digits",d)
+
+inputhello world! 123
+Letters 10
+Digits 3
+
+Q A website requires the users to input username and password to register. Write a program to check the validity of password input by users.
+
+import re
+
+p = input("input your pass")
+x = True
+while x:
+
+  if (len(p) < 6 or len(p) > 12):
+    break
+
+  elif not re.search("[a-z]",p):
+    break
+  elif not re.search("[0-9]",p):
+    break
+
+  elif not re.search("[A-Z]",p):
+    break
+  elif not re.search("[$#@]",p):
+    break
+  elif re.search("\s",p):
+    break  
+
+  else:
+    print("Valid Password")
+    x= False
+    break
+
+if x:
+  print("Not a valid pass")
+  
+  input your passW3r@100a
+Valid Password
