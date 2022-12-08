@@ -1,0 +1,45 @@
+Q Write a Python program to Extract Unique values dictionary values?
+
+dict1 = {'k1':1,'k2':2,'k3':'hello','k4':'hello'}
+
+uniq_values = {i for i in dict1.values()}
+uniq_values
+
+{1, 2, 'hello'}
+
+Q Write a Python program to find the sum of all items in a dictionary?
+
+dict1 = {'k1':1,'k2':2,'k3':52,'k4':235}
+
+sum = 0
+for i in dict1.values():
+
+  sum = sum + i
+
+print("Sum of items: ",sum)
+
+Sum of items:  290
+
+Q Write a Python program to Merging two Dictionaries?
+
+dict1 = { 'x': 1, 'l': 2}
+dict2 = { 'k': 3, 'z': 4, 'x': 11}
+# merging dict2 into dict1
+for item in dict2.items():
+    dict1.setdefault(item[0], item[1])
+print(dict1)
+
+{'x': 1, 'l': 2, 'k': 3, 'z': 4}
+
+Q Write a Python program to convert key-values list to flat dictionary?
+
+dict1 = {'month': [2,3], 'name' : ['Feb','March']}
+
+res = dict(zip(dict1['month'],dict1['name']))
+
+print("Flat  dict : ",res)
+
+Flat  dict :  {2: 'Feb', 3: 'March'}
+
+Q Write a Python program to insertion at the beginning in OrderedDict?
+
